@@ -1,0 +1,521 @@
+/* Reset Styles */
+/* Resets default browser styles for consistency across different browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+/* Sets the base font, text color, and background color for the website */
+body {
+    font-family: 'Open Sans', Arial, sans-serif; /* Clear, readable font */
+    color: #333333; /* Dark grey text for good contrast */
+    background-color: #ffaddb; /* Light Pink background for high contrast */
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Link Styles */
+/* Styles all anchor tags */
+a {
+    color: #4caf50; /* Consistent green color for links */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+a:hover,
+a:focus {
+    color: #388e3c; /* Darker green on hover/focus */
+    outline: none; /* Removes default outline on focus */
+}
+
+/* Heading Styles */
+/* Styles for headings to ensure clear hierarchy */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #2f4f4f; /* Dark slate gray for headings */
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+/* Navigation Menu */
+/* Styles the navigation bar */
+nav {
+    background-color: #2f4f4f; /* Dark background for contrast */
+    position: relative;
+}
+
+/* Navigation Menu List */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    padding: 10px 20px;
+}
+
+/* Navigation Menu Items */
+.nav-menu li {
+    margin: 5px;
+}
+
+/* Navigation Menu Links */
+.nav-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #ffffff; /* White text for high contrast */
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu .active {
+    background-color: #4caf50; /* Green background on hover/active */
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+/* Responsive Navigation Menu */
+/* Hamburger menu icon for mobile devices */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    /* Show the menu toggle icon */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide the navigation menu by default */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #2f4f4f;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+    }
+
+    /* Show the navigation menu when toggled */
+    .nav-menu.show {
+        display: flex;
+    }
+
+    /* Navigation menu links */
+    .nav-menu a {
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid #4caf50;
+    }
+}
+
+/* Header Styles */
+/* Styles for the main header/hero section */
+header {
+    background-image: url('hero-image.jpg'); /* High-quality hero image */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* White text over image */
+    text-align: center;
+    padding: 150px 20px; /* Increased padding for better spacing */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for readability */
+}
+
+header p {
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #45a049;
+    color: #ffffff;
+}
+
+/* Main Content Styles */
+/* Styles for the main content area */
+main {
+    padding: 60px 20px;
+    background-color: #f9f9f9; /* Light grey background for contrast */
+}
+
+/* Section Styles */
+/* Styles for different sections */
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #4caf50;
+    margin-bottom: 40px;
+}
+
+/* Card Container */
+/* Flex container for cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Card Styles */
+/* Styles for individual cards */
+.card {
+    background-color: #ffffff;
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #2f4f4f;
+}
+
+.card p {
+    margin-bottom: 20px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* Read More Link */
+.read-more {
+    color: #4caf50;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+.read-more:hover,
+.read-more:focus {
+    color: #388e3c;
+}
+
+/* Form Styles */
+/* Styles for forms */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2f4f4f;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Button Styles */
+/* Styles for buttons inside forms */
+button {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover,
+button:focus {
+    background-color: #45a049;
+}
+
+/* Image Styles */
+/* Styles for images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Gallery Styles */
+/* Styles for image galleries */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery-item {
+    width: 30%;
+    margin: 15px;
+    text-align: center;
+}
+
+.gallery-item img {
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    color: #555555;
+}
+
+/* Footer Styles */
+/* Styles for the footer */
+footer {
+    background-color: #2f4f4f;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: #4caf50;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.3s;
+}
+
+.social-media img:hover {
+    opacity: 0.7;
+}
+
+/* Accessibility Styles */
+/* Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px dashed #4caf50; /* High-visibility outline */
+    outline-offset: 4px;
+}
+
+/* Placeholder Styles */
+/* Styles for input placeholders */
+::placeholder {
+    color: #aaaaaa;
+    opacity: 1;
+}
+
+/* Media Queries for Responsiveness */
+/* Large devices (laptops/desktops) */
+@media (max-width: 1200px) {
+    .card {
+        width: 45%;
+    }
+    .gallery-item,
+    .reward-item {
+        width: 45%;
+    }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 768px) {
+    /* Adjust header padding */
+    header {
+        padding: 100px 20px;
+    }
+    header h1 {
+        font-size: 2.5em;
+    }
+    header p {
+        font-size: 1.2em;
+    }
+
+    /* Adjust navigation menu */
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #2f4f4f;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu.show {
+        left: 0;
+    }
+
+    /* Navigation menu links */
+    .nav-menu a {
+        width: 100%;
+        padding: 15px 20px;
+        border-top: 1px solid #4caf50;
+    }
+
+    /* Adjust card widths */
+    .card,
+    .gallery-item,
+    .reward-item {
+        width: 100%;
+    }
+}
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+    header p {
+        font-size: 1em;
+    }
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    /* Adjust footer padding */
+    footer {
+        padding: 30px 20px;
+    }
+}
+
+/* Search Bar Styles */
+/* Styles for the search bar */
+.search-bar {
+    position: relative;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px 40px 10px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+.search-bar button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: none;
+    border: none;
+    color: #4caf50;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    color: #388e3c;
+}
+
+/* Additional Accessibility Features */
+/* High contrast mode for better visibility */
+@media (prefers-contrast: high) {
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    nav,
+    footer {
+        background-color: #000000;
+    }
+    a {
+        color: #00ffff;
+    }
+    a:hover,
+    a:focus {
+        color: #ff00ff;
+    }
+}
+
+/* Print Styles */
+/* Optimizes the page for printing */
+@media print {
+    nav,
+    footer,
+    .cta-button,
+    .menu-toggle {
+        display: none;
+    }
+    body {
+        color: #000000;
+        background-color: #ffffff;
+    }
+    img {
+        max-width: 100%;
+    }
+}
